@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""starts a Flask we application"""
+"""Starts a Flask web application"""
 
 
 from flask import Flask
@@ -8,13 +8,13 @@ app = Flask(__name__)
 
 @app.route('/', strict_slashes=False)
 def hello_holberton():
-    """Return a string at the root route"""
+    """Returns a string at the root route"""
     return 'Hello HBNB!'
 
 
 @app.route('/hbnb', strict_slashes=False)
 def hbnb():
-    """Return a string at the /hbnb route"""
+    """Returns a string at the /hbnb route"""
     return 'HBNB'
 
 
@@ -32,7 +32,7 @@ def pythoniscool(text):
     """Returns a string at the /python route, with a default text
     of 'is cool', or the expansion of <text>"""
     new = text.replace('_', ' ')
-    return 'python %s' % new
+    return 'Python %s' % new
 
 
 if __name__ == '__main__':
